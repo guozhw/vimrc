@@ -59,6 +59,14 @@ command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7
 
+" Set file encoding format
+set fileencodings=utf-8,gb2312,gb18030,gbk,utf-16le,big5,ucs-bom,cp936,latin1
+set fileencoding=utf-8
+set termencoding=utf-8
+
+set fileformats=unix,dos,mac
+set encoding=utf-8
+
 " Avoid garbled characters in Chinese language windows OS
 let $LANG='en' 
 set langmenu=en
