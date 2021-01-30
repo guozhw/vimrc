@@ -405,6 +405,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 " Plugin outside ~/.vim/plugged with post-update hook
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 
 " seoul256 (dark):
