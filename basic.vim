@@ -410,6 +410,12 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'ajh17/vimcompletesme'
+
+" markdown
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'dhruvasagar/vim-table-mode'
+Plug 'vimwiki/vimwiki'
+
 call plug#end()
 
 " seoul256 (dark):
