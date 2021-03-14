@@ -205,19 +205,19 @@ set wrap "Wrap lines
 " python
 au BufNewFile,BufRead *.py
     \ set tabstop=4
-    \ set softtabstop=4
-    \ set shiftwidth=4
-    \ set textwidth=79
-    \ set expandtab       |" replace tabs with spaces
-    \ set autoindent      |" copy indent when starting a new line
-    \ set fileformat=unix
-    \ set foldmethod=indent
+    \ softtabstop=4
+    \ shiftwidth=4
+    \ textwidth=79
+    \ expandtab       |" replace tabs with spaces
+    \ autoindent      |" copy indent when starting a new line
+    \ fileformat=unix
+    \ foldmethod=indent
 
 " js html css
 au BufNewFile,BufRead *.js, *.html, *.css
     \ set tabstop=2
-    \ set softtabstop=2
-    \ set shiftwidth=2
+    \ softtabstop=2
+    \ shiftwidth=2
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
