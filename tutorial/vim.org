@@ -1,0 +1,8 @@
+* reference
+  [[https://learnvimscriptthehardway.stevelosh.com/][Learn Vimscript the Hard Way]]
+  [[https://google.github.io/styleguide/vimscriptguide.xml][Google Vimscript Style Guide]]
+  [[https://google.github.io/styleguide/vimscriptfull.xml][Google Vimscript Guide]]
+  [[https://zhuanlan.zhihu.com/p/37352209][VimScript 五分钟入门]]
+  [[https://github.com/wsdjeg/vim-galore-zh_cn][Vim 从入门到精通]]
+  [[https://8thlight.com/blog/tony-distinti/2021/01/05/vim-script-case-study.html][A Case Study in Vim Script 101: Making a Test Runner]]
+
