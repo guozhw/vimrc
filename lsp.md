@@ -27,4 +27,4 @@ https://dev.to/jogendra/using-vim-for-go-development-5hc6
 
 
 https://www.youtube.com/watch?v=Gs1VDYnS-Ac
-
+[vim-go-tutorial](https://github.com/fatih/vim-go-tutorial)
