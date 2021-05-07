@@ -203,21 +203,31 @@ set wrap "Wrap lines
 " => FileType specific changes
 """"""""""""""""""""""""""""""
 " python
-au BufNewFile,BufRead *.py
-    \ set tabstop=4
-    \ softtabstop=4
-    \ shiftwidth=4
-    \ textwidth=79
-    \ expandtab       |" replace tabs with spaces
-    \ autoindent      |" copy indent when starting a new line
-    \ fileformat=unix
-    \ foldmethod=indent
+augroup filetype_python
+    autocmd!
+    autocmd FileType python
+                \ set tabstop=4
+                \ softtabstop=4
+                \ shiftwidth=4
+                \ textwidth=79
+                \ expandtab       |" replace tabs with spaces
+                \ autoindent      |" copy indent when starting a new line
+                \ fileformat=unix
+                \ foldmethod=indent
+augroup END
 
 " js html css
-au BufNewFile,BufRead *.js,*.html,*.css
-    \ set tabstop=2
-    \ softtabstop=2
-    \ shiftwidth=2
+augroup filetype_html
+    autocmd!
+    autocmd BufNewFile,BufRead,BufWrite *.js,*.html,*.css
+                \ set tabstop=2
+                \ softtabstop=2
+                \ shiftwidth=2
+                \ textwidth=79
+                \ expandtab       |" replace tabs with spaces
+                \ autoindent      |" copy indent when starting a new line
+                \ fileformat=unix
+augroup END
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
