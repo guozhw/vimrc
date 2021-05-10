@@ -200,13 +200,13 @@ set si "Smart indent
 set wrap "Wrap lines
 
 """"""""""""""""""""""""""""""
-" => FileType specific changes
+" => FileType specific settings
 """"""""""""""""""""""""""""""
 " python
 augroup filetype_python
     autocmd!
     autocmd FileType python
-                \ set tabstop=4
+                \ setlocal tabstop=4
                 \ softtabstop=4
                 \ shiftwidth=4
                 \ textwidth=79
@@ -219,8 +219,8 @@ augroup END
 " js html css
 augroup filetype_html
     autocmd!
-    autocmd BufNewFile,BufRead,BufWrite *.js,*.html,*.css
-                \ set tabstop=2
+    autocmd BufNewFile,BufWritePre,BufRead,BufWrite *.js,*.html,*.css
+                \ setlocal tabstop=2
                 \ softtabstop=2
                 \ shiftwidth=2
                 \ textwidth=79
