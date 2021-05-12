@@ -181,49 +181,58 @@ set noswapfile
 """"""""""""""""""""""""""""""
 " => FileType specific settings
 """"""""""""""""""""""""""""""
-if index(['python'], &filetype) != -1
-    augroup filetype_python
-        autocmd!
-        autocmd FileType python
-                    \ setlocal tabstop=4
-                    \ softtabstop=4
-                    \ shiftwidth=4
-                    \ textwidth=79
-                    \ expandtab       |" replace tabs with spaces
-                    \ autoindent      |" copy indent when starting a new line
-                    \ fileformat=unix
-                    \ foldmethod=indent
-    augroup END
-elseif index(['js','html','css'], &filetype) != -1
-    augroup filetype_html
-        autocmd!
-        autocmd BufNewFile,BufWritePre,BufRead,BufWrite *.js,*.html,*.css
-                    \ setlocal tabstop=2
-                    \ softtabstop=2
-                    \ shiftwidth=2
-                    \ textwidth=79
-                    \ expandtab       |" replace tabs with spaces
-                    \ autoindent      |" copy indent when starting a new line
-                    \ fileformat=unix
-    augroup END
-elseif index(['c','cpp'], &filetype) != -1
-    " Use spaces instead of tabs
-    setlocal expandtab
-    " Be smart when using tabs ;)
-    setlocal smarttab
+" Use spaces instead of tabs
+setlocal expandtab
+" Be smart when using tabs ;)
+setlocal smarttab
 
-    " 1 tab == 4 spaces
-    setlocal shiftwidth=4
-    setlocal tabstop=4
+" 1 tab == 4 spaces
+setlocal shiftwidth=4
+setlocal tabstop=4
 
-    " Linebreak on 5000 characters
-    " set lbr
-    " set tw=5000
+" Linebreak on 5000 characters
+" set lbr
+" set tw=5000
 
-    setlocal ai "Auto indent
-    setlocal si "Smart indent
-    setlocal wrap "Wrap lines
-endif
+setlocal ai "Auto indent
+setlocal si "Smart indent
+setlocal wrap "Wrap lines
+
+" if index(['javascript','html','css'], &filetype) != -1
+augroup filetype_python
+	autocmd!
+	autocmd FileType python
+				\ setlocal tabstop=4
+				\ softtabstop=4
+				\ shiftwidth=4
+				\ textwidth=79
+				\ expandtab       |" replace tabs with spaces
+				\ autoindent      |" copy indent when starting a new line
+				\ fileformat=unix
+				\ foldmethod=indent
+augroup END
+augroup filetype_html
+	autocmd!
+	autocmd BufNewFile,BufWritePre,BufRead,BufWrite *.js,*.html,*.css
+				\ setlocal tabstop=2
+				\ softtabstop=2
+				\ shiftwidth=2
+				\ textwidth=79
+				\ expandtab       |" replace tabs with spaces
+				\ autoindent      |" copy indent when starting a new line
+				\ fileformat=unix
+augroup END
+augroup filetype_c
+	autocmd!
+	autocmd BufNewFile,BufWritePre,BufRead,BufWrite *.c,*.cpp,*.h,*.hpp
+				\ setlocal tabstop=4
+				\ softtabstop=4
+				\ shiftwidth=4
+				\ textwidth=80 
+				\ expandtab       |" replace tabs with spaces
+				\ autoindent      |" copy indent when starting a new line
+				\ fileformat=unix
+augroup END
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
