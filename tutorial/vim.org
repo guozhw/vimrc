@@ -1,3 +1,67 @@
+* Echoing Messages
+  help echo
+  help echom
+  help :messages
+* Setting Options
+  There are two main kinds of options: boolean options (either "on" or "off") and options that take a value.
+  1. Boolean Options
+     set number
+     set nonumber
+  2. Toggling Boolean Options
+     set number!
+  3. Checking Options
+     set numberwidth?
+  4. Setting Multiple Options at Once
+     set number numberwidth=6
+* Mapping
+  1. Basic Mapping
+     map
+  2. Modal Mapping
+     nmap
+     vmap
+     imap
+  3. Strict Mapping
+     nmap nunmap
+     map noremap
+     nmap nnoremap
+     vmap vnoremap
+     imap inoremap
+     unmap
+  4. Operator-Pending Mappings
+     Keys   Operator   Movement
+     ----   --------   -------------
+     dw     Delete     to next word
+     ci(    Change     inside parens
+     yt,    Yank       until comma
+
+     help omap-info
+     help normal
+     help execute
+     help expr-quote
+     
+* Leaders
+  mapleader
+  maplocalleader
+* Buffer-Local Options and Mappings
+  help local-options
+  help setlocal
+  help map-local
+
+* Autocommands
+  help autocmd-events
+  help autocmd-groups
+
+* Variable
+  1. Options as Variables
+     let &textwidth = 100
+  2. Local Options
+     let &l:number = 1
+  3. Variable Scoping
+     let b:hello = "world"
+  
+  help registers
+  help internal-variables
+  
 * reference
   [[https://learnvimscriptthehardway.stevelosh.com/][Learn Vimscript the Hard Way]]
   [[https://google.github.io/styleguide/vimscriptguide.xml][Google Vimscript Style Guide]]
