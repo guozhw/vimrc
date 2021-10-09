@@ -1,3 +1,5 @@
+- [256 colors in vim](https://vim.fandom.com/wiki/256_colors_in_vim)
+
 数字加减：普通模式下:ctrl+a(+) ctrl+x(-)
 
 vim批量修改数字（加1，减1）
