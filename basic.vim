@@ -429,6 +429,10 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 call plug#begin('~/.vim/plugged')
+
+" plug install plugin using proxy
+let g:plug_url_format = 'git@github.com:%s.git'
+
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 " Plugin outside ~/.vim/plugged with post-update hook
